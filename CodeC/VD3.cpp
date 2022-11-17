@@ -13,15 +13,15 @@ bool ascending(int left, int right){
 bool descending(int left, int right){
    return left < right;
 }
-void selectionSort(int *arr, int length, bool (*hihi)(int, int)){
+void selectionSort(int *arr, int length, bool (*compare)(int, int)){
    for (int i_start = 0; i_start < length; i_start++) {
       int minIndex = i_start;
       for (int i_current = i_start + 1; i_current < length; i_current++){
-    if (hihi(arr[minIndex], arr[i_current]))    {
-       minIndex = i_current;
-    }
+        if (compare(arr[minIndex], arr[i_current]))    {
+           minIndex = i_current;
+        }
       }
-      swap(arr[i_start], arr[minIndex]); // std::swap
+      swap(arr[i_start], arr[minIndex]);
    }
 }
 int main() {
