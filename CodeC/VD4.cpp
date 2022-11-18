@@ -50,12 +50,12 @@ int main()
 	
 	cout << "Nhap dau . de thoat!" << endl;
 	
-	char tuTV[60];
+	char tuTA[60];
 	cout << "Nhap tu tieng Anh: ";
-	while (strcmp(gets(tuTV), ".")){
-		it = dict.find(tuTV);
-		if (it == dict.end()) cout << "Tu " << tuTV << ": Khong co trong tu dien" << endl;
-		else cout << "Nghia cua tu " << tuTV << " la: " << dict[tuTV] << endl;	
+	while (strcmp(gets(tuTA), ".")){
+		it = dict.find(tuTA);
+		if (it == dict.end()) cout << "Tu " << tuTA << ": Khong co trong tu dien" << endl;
+		else cout << "Nghia cua tu " << tuTA << " la: " << dict[tuTA] << endl;
 		cout << "Nhap tu tieng Anh: ";
 	}
 	
