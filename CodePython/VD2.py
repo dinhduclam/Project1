@@ -1,6 +1,6 @@
 
-n = int(input())
-k = int(input())
+n = int(input('n='))
+k = int(input('k='))
 used = [False]*n
 a = [0]*k
 count = 0

@@ -1,4 +1,4 @@
-//Liet ke cac to hop chap k cua n ki tu dau tien
+//Liet ke cac chinh hop chap k cua n ki tu dau tien trong bang chu cai
 #include <stdio.h>
 
 int n, k, count = 0;
@@ -7,7 +7,7 @@ int a[123];
 
 void show() {
     for (int i = 1; i <= k; i++)
-        printf("%c", a[i]);
+        printf("%c ", a[i]);
     printf("\n");
     count++;
 }
@@ -21,13 +21,16 @@ void backtrack(int pos) {
         if (!used[i]) {
             a[pos] = i;
             used[i] = true;
-            back(pos + 1);
+            backtrack(pos + 1);
             used[i] = false;
         }
 }
 
 int main() {
-    scanf("%d %d", &n, &k);
+	printf("n = ");
+	scanf("%d", &n);
+	printf("k = ");
+    scanf("%d", &k);
     backtrack(1);
     printf("Co %d to hop", count);
 }

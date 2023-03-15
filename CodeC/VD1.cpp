@@ -19,7 +19,7 @@ void swap(int &a, int &b){
 int main(){
 	clock_t begin, end;
 	float time_spend = 0;
-	int n = 10;	
+	int n = 1;	
 	printf("BUBBLE SORT:\n");
 	for (int k = 1; k <= 4; k++){
 		n *= 10;
@@ -35,7 +35,7 @@ int main(){
 		printf(" n = %d thi thoi gian chay la %f micro seconds\n", n, time_spend * 1e6);	
 		delete a;
 	}
-	n = 10;
+	n = 1;
 	printf("SELECTION SORT:\n");
 	for (int k = 1; k <= 4; k++){
 		n *= 10;
