@@ -29,6 +29,13 @@ int add(char *s){
 		tuTV[i-tab_index-1] = s[i];
 	}
 	
+	while (tuTA[strlen(tuTA) - 1] == ' '){
+		tuTA[strlen(tuTA) - 1] = NULL;	
+	}
+	while (tuTV[strlen(tuTV) - 1] == ' '){
+		tuTV[strlen(tuTV) - 1] = NULL;	
+	}
+	
 	dict.insert(pair<string, string>(tuTA, tuTV));
 }
 
@@ -37,7 +44,7 @@ int add(char *s){
 int main()
 {
 	FILE *f;
-	f = fopen("Tu dien anh viet xay dung .txt", "r");
+	f = fopen("../File/Tu dien anh viet xay dung .txt", "r");
 	
 	char s[200];
 	while (!feof(f)){
